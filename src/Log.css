@@ -1,0 +1,100 @@
+/* Ogólny styl kontenera logowania */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e7dff, #c4aaff);
+}
+
+/* Formularz logowania */
+.login-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Nagłówek */
+.login-form h1 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Styl dla grupy inputów */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #6e7dff;
+    outline: none;
+}
+
+/* Stylizacja przycisku */
+.button-group {
+    margin-top: 1rem;
+}
+
+.button-group button {
+    background-color: #6e7dff;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    background-color: #4e5dbd;
+}
+
+/* Stylizacja komunikatu o błędzie */
+.error-message {
+    color: #ff4d4d;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+/* Dodatkowe opcje: linki */
+.additional-options {
+    margin-top: 1rem;
+}
+
+.additional-options a {
+    color: #6e7dff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.additional-options a:hover {
+    text-decoration: underline;
+}
+
+.additional-options p {
+    margin-top: 1rem;
+    font-size: 1rem;
+}

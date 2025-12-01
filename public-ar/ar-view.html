@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AR Pierwiastek</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      a-scene {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene embedded arjs="sourceType: webcam;">
+      <a-assets id="assets-container"></a-assets>
+
+      <a-marker type="pattern" url="markers/marker.patt" id="mainMarker">
+        <a-entity id="modelEntity"
+                  scale="0.5 0.5 0.5"
+                  position="0 0 0"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
+        </a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+      <a-entity light="type: ambient; color: #ffffff; intensity: 1"></a-entity>
+      <a-entity light="type: directional; color: #ffffff; intensity: 0.7" position="1 1 0"></a-entity>
+    </a-scene>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        if (!id) return;
+
+        const modelPath = `models/${id}.glb`;
+        const assets = document.getElementById("assets-container");
+        const modelAsset = document.createElement("a-asset-item");
+        modelAsset.setAttribute("id", "currentModel");
+        modelAsset.setAttribute("src", modelPath);
+        assets.appendChild(modelAsset);
+
+        const modelEntity = document.getElementById("modelEntity");
+        modelEntity.setAttribute("gltf-model", "#currentModel");
+      });
+    </script>
+  </body>
+</html>

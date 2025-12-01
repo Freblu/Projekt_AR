@@ -1,0 +1,78 @@
+import React, { useState } from "react";
+import './Register.css';
+
+const Register = () => {
+    const [email, setEmail] = useState(""); // Stan dla e-maila
+    const [password, setPassword] = useState(""); // Stan dla hasła
+    const [confirmPassword, setConfirmPassword] = useState(""); // Stan dla potwierdzenia hasła
+    const [error, setError] = useState(""); // Stan dla błędu rejestracji
+
+    // Funkcja obsługująca wysłanie formularza rejestracji
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Prosta walidacja: sprawdzamy, czy hasła się zgadzają
+        if (password !== confirmPassword) {
+            setError("Hasła muszą się zgadzać");
+            return;
+        }
+
+        // Zapisz dane użytkownika w localStorage
+        const user = { email, password };
+        localStorage.setItem('user', JSON.stringify(user));  // Zapisujemy dane użytkownika
+
+        // Po rejestracji przekierowujemy użytkownika do logowania
+        alert("Rejestracja zakończona! Przekierowuję do logowania...");
+        window.location.href = '/login';  // Przekierowanie na stronę logowania
+    };
+
+    return (
+        <div className="login-container">
+            <div className="login-form">
+                <h1>Rejestracja</h1>
+                <form onSubmit={handleSubmit}>
+                    <div className="input-group">
+                        <label htmlFor="email">Adres e-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="password">Hasło</label>
+                        <input
+                            type="password"
+                            id="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="confirmPassword">Potwierdź hasło</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    {error && <p className="error-message">{error}</p>} {/* Komunikat o błędzie */}
+                    <div className="button-group">
+                        <button type="submit">Zarejestruj się</button>
+                    </div>
+                </form>
+
+                <div className="additional-options">
+                    <p>Masz już konto? <a href="/login">Zaloguj się</a></p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Register;

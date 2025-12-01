@@ -1,0 +1,144 @@
+.re-alkmet {
+  background-color: #f44336;
+  color: black;
+  border-radius: 0;
+}
+
+.or-alkziem {
+  background-color: #ff9800;
+  color: black;
+  border-radius: 0;
+}
+
+
+.aq-metal {
+  background-color: #2fd5c8;
+  color: black;
+  border-radius: 0;
+}
+
+.ye-transmetal {
+  background-color: #f6ec25;
+  color: black;
+  border-radius: 0;
+}
+
+
+.gr-niemet {
+  background-color: #21f32f;
+  color: black;
+  border-radius: 0;
+}
+
+.gr-halogen {
+  background-color: #19ad23;
+  color: black;
+  border-radius: 0;
+}
+
+.pu-szlach {
+  background-color: #970aca;
+  color: black;
+  border-radius: 0;
+}
+
+.gr-niezn {
+  background-color: #838383;
+  color: black;
+  border-radius: 0;
+}
+
+.bond-option {
+  background-color: #101b1b;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bond-option.selected {
+  background-color: #424344;
+  border-color: #6b7280;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #00ffff;
+  }
+
+  50% {
+    box-shadow: 0 0 20px #00ffff;
+  }
+
+  100% {
+    box-shadow: 0 0 10px #00ffff;
+  }
+}
+
+.bond-option {
+  background-color: #111;
+  /* ciemne tło */
+  color: white;
+  /* biały tekst */
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.bond-option:hover {
+  background-color: #333;
+}
+
+.bond-option.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.main-layout {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.scene-container {
+  width: 100%;
+  height: 300px;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .scene-container {
+    height: 500px;
+  }
+}
+
+.floating-side {
+  position: static !important;
+  width: 100% !important;
+}
+
+.periodic-grid {
+  grid-template-columns: repeat(6, 1fr) !important;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.mobile-menu-toggle {
+  display: block;
+  margin-bottom: 1rem;
+}

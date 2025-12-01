@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Model AR pierwiastka</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ngokevin/aframe-animation-component@3.2.3/dist/aframe-animation-component.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+  <style>
+    body, html { margin: 0; padding: 0; overflow: hidden; }
+    a-scene { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const symbol = params.get("symbol");
+
+    const modelMap = {
+      "pu-szlach": "pu-szlach.glb",
+      "gr-niemet": "gr-niemet.glb",
+      "re-alkmet": "re-alkmet.glb",
+      "or-alkziem": "or-alkziem.glb",
+      "aq-metal": "aq-metal.glb",
+      "gr-halogen": "gr-halogen.glb",
+      "ye-transmetal": "ye-transmetal.glb"
+    };
+
+    const modelUrl = symbol && modelMap[symbol]
+      ? `models/${modelMap[symbol]}`
+      : null;
+
+    if (modelUrl) {
+      document.write(`
+         <a-scene
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+    >
+      <a-assets>
+        <a-asset-item id="model" src="${modelUrl}"></a-asset-item>
+      </a-assets>
+
+      <a-marker
+        type="pattern"
+        url="markers/marker.patt"
+        emitevents="true"
+      >
+        <a-entity
+          gltf-model="#model"
+          scale="0.4 0.4 0.4"
+          position="0.5 1 -1"
+          rotation="0 0 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"
+        ></a-entity>
+      </a-marker>
+
+      <a-entity light="type: directional; color: #ffffff; intensity: 1" position="0 1 1"></a-entity>
+      <a-entity light="type: ambient; color: #ffffff; intensity: 0.5"></a-entity>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+      `);
+    } else {
+      document.write('<p style="color:white; text-align:center;">Nie znaleziono modelu dla symbolu.</p>');
+    }
+  </script>
+</body>
+</html>

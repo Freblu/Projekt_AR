@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Modele AR Pierwiastków</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/ngokevin/aframe-animation-component@3.2.3/dist/aframe-animation-component.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    a-scene {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <a-scene embedded arjs="sourceType: webcam;">
+    <a-assets>
+      <a-asset-item id="oxygenModel" src="models/oxygen.glb"></a-asset-item>
+      <a-asset-item id="model1" src="models/1.glb"></a-asset-item>
+      <a-asset-item id="model2" src="models/2.glb"></a-asset-item>
+      <a-asset-item id="model3" src="models/3.glb"></a-asset-item>
+      <a-asset-item id="model4" src="models/4.glb"></a-asset-item>
+      <a-asset-item id="model5" src="models/5.glb"></a-asset-item>
+      <a-asset-item id="model6" src="models/6.glb"></a-asset-item>
+      <a-asset-item id="model7" src="models/7.glb"></a-asset-item>
+      <a-asset-item id="model8" src="models/8.glb"></a-asset-item>
+      <a-asset-item id="model9" src="models/9.glb"></a-asset-item>
+      <a-asset-item id="model10" src="models/10.glb"></a-asset-item>
+      <a-asset-item id="model11" src="models/11.glb"></a-asset-item>
+      <a-asset-item id="model12" src="models/12.glb"></a-asset-item>
+      <a-asset-item id="model13" src="models/13.glb"></a-asset-item>
+      <a-asset-item id="model14" src="models/14.glb"></a-asset-item>
+      <a-asset-item id="model15" src="models/15.glb"></a-asset-item>
+      <a-asset-item id="model16" src="models/16.glb"></a-asset-item>
+      <a-asset-item id="model17" src="models/17.glb"></a-asset-item>
+      <a-asset-item id="model18" src="models/18.glb"></a-asset-item>
+      <a-asset-item id="model19" src="models/19.glb"></a-asset-item>
+      <a-asset-item id="model20" src="models/20.glb"></a-asset-item>
+      <a-asset-item id="model21" src="models/21.glb"></a-asset-item>
+      <a-asset-item id="model22" src="models/22.glb"></a-asset-item>
+      <a-asset-item id="model23" src="models/23.glb"></a-asset-item>
+      <a-asset-item id="model24" src="models/24.glb"></a-asset-item>
+      <a-asset-item id="model25" src="models/25.glb"></a-asset-item>
+      <a-asset-item id="model26" src="models/26.glb"></a-asset-item>
+      <a-asset-item id="model27" src="models/27.glb"></a-asset-item>
+      <a-asset-item id="model28" src="models/28.glb"></a-asset-item>
+      <a-asset-item id="model29" src="models/29.glb"></a-asset-item>
+      <a-asset-item id="model30" src="models/30.glb"></a-asset-item>
+      <a-asset-item id="model31" src="models/31.glb"></a-asset-item>
+      <a-asset-item id="model32" src="models/32.glb"></a-asset-item>
+      <a-asset-item id="model33" src="models/33.glb"></a-asset-item>
+      <a-asset-item id="model34" src="models/34.glb"></a-asset-item>
+      <a-asset-item id="model35" src="models/35.glb"></a-asset-item>
+      <a-asset-item id="model36" src="models/36.glb"></a-asset-item>
+      <a-asset-item id="model37" src="models/37.glb"></a-asset-item>
+      <a-asset-item id="model38" src="models/38.glb"></a-asset-item>
+      <a-asset-item id="model39" src="models/39.glb"></a-asset-item>
+      <a-asset-item id="model40" src="models/40.glb"></a-asset-item>
+      <a-asset-item id="model41" src="models/41.glb"></a-asset-item>
+      <a-asset-item id="model42" src="models/42.glb"></a-asset-item>
+      <a-asset-item id="model43" src="models/43.glb"></a-asset-item>
+      <a-asset-item id="model44" src="models/44.glb"></a-asset-item>
+      <a-asset-item id="model45" src="models/45.glb"></a-asset-item>
+      <a-asset-item id="model46" src="models/46.glb"></a-asset-item>
+      <a-asset-item id="model47" src="models/47.glb"></a-asset-item>
+      <a-asset-item id="model48" src="models/48.glb"></a-asset-item>
+      <a-asset-item id="model49" src="models/49.glb"></a-asset-item>
+      <a-asset-item id="model50" src="models/50.glb"></a-asset-item>
+      <a-asset-item id="model51" src="models/51.glb"></a-asset-item>
+      <a-asset-item id="model52" src="models/52.glb"></a-asset-item>
+      <a-asset-item id="model53" src="models/53.glb"></a-asset-item>
+      <a-asset-item id="model54" src="models/54.glb"></a-asset-item>
+      <a-asset-item id="model55" src="models/55.glb"></a-asset-item>
+      <a-asset-item id="model56" src="models/56.glb"></a-asset-item>
+      <a-asset-item id="model57" src="models/57.glb"></a-asset-item>
+      <a-asset-item id="model58" src="models/58.glb"></a-asset-item>
+      <a-asset-item id="model59" src="models/59.glb"></a-asset-item>
+      <a-asset-item id="model60" src="models/60.glb"></a-asset-item>
+      <a-asset-item id="model61" src="models/61.glb"></a-asset-item>
+      <a-asset-item id="model62" src="models/62.glb"></a-asset-item>
+      <a-asset-item id="model63" src="models/63.glb"></a-asset-item>
+      <a-asset-item id="model64" src="models/64.glb"></a-asset-item>
+      <a-asset-item id="model65" src="models/65.glb"></a-asset-item>
+      <a-asset-item id="model66" src="models/66.glb"></a-asset-item>
+      <a-asset-item id="model67" src="models/67.glb"></a-asset-item>
+      <a-asset-item id="model68" src="models/68.glb"></a-asset-item>
+      <a-asset-item id="model69" src="models/69.glb"></a-asset-item>
+      <a-asset-item id="model70" src="models/70.glb"></a-asset-item>
+      <a-asset-item id="model71" src="models/71.glb"></a-asset-item>
+      <a-asset-item id="model72" src="models/72.glb"></a-asset-item>
+      <a-asset-item id="model73" src="models/73.glb"></a-asset-item>
+      <a-asset-item id="model74" src="models/74.glb"></a-asset-item>
+      <a-asset-item id="model75" src="models/75.glb"></a-asset-item>
+      <a-asset-item id="model76" src="models/76.glb"></a-asset-item>
+      <a-asset-item id="model77" src="models/77.glb"></a-asset-item>
+      <a-asset-item id="model78" src="models/78.glb"></a-asset-item>
+      <a-asset-item id="model79" src="models/79.glb"></a-asset-item>
+      <a-asset-item id="model80" src="models/80.glb"></a-asset-item>
+      <a-asset-item id="model81" src="models/81.glb"></a-asset-item>
+      <a-asset-item id="model82" src="models/82.glb"></a-asset-item>
+      <a-asset-item id="model83" src="models/83.glb"></a-asset-item>
+      <a-asset-item id="model84" src="models/84.glb"></a-asset-item>
+      <a-asset-item id="model85" src="models/85.glb"></a-asset-item>
+      <a-asset-item id="model86" src="models/86.glb"></a-asset-item>
+      <a-asset-item id="model87" src="models/87.glb"></a-asset-item>
+      <a-asset-item id="model88" src="models/88.glb"></a-asset-item>
+      <a-asset-item id="model89" src="models/89.glb"></a-asset-item>
+      <a-asset-item id="model90" src="models/90.glb"></a-asset-item>
+      <a-asset-item id="model91" src="models/91.glb"></a-asset-item>
+      <a-asset-item id="model92" src="models/92.glb"></a-asset-item>
+      <a-asset-item id="model93" src="models/93.glb"></a-asset-item>
+      <a-asset-item id="model94" src="models/94.glb"></a-asset-item>
+      <a-asset-item id="model95" src="models/95.glb"></a-asset-item>
+      <a-asset-item id="model96" src="models/96.glb"></a-asset-item>
+      <a-asset-item id="model97" src="models/97.glb"></a-asset-item>
+      <a-asset-item id="model98" src="models/98.glb"></a-asset-item>
+      <a-asset-item id="model99" src="models/99.glb"></a-asset-item>
+      <a-asset-item id="model100" src="models/100.glb"></a-asset-item>
+      <a-asset-item id="model101" src="models/101.glb"></a-asset-item>
+      <a-asset-item id="model102" src="models/102.glb"></a-asset-item>
+      <a-asset-item id="model103" src="models/103.glb"></a-asset-item>
+      <a-asset-item id="model104" src="models/104.glb"></a-asset-item>
+      <a-asset-item id="model105" src="models/105.glb"></a-asset-item>
+      <a-asset-item id="model106" src="models/106.glb"></a-asset-item>
+      <a-asset-item id="model107" src="models/107.glb"></a-asset-item>
+      <a-asset-item id="model108" src="models/108.glb"></a-asset-item>
+      <a-asset-item id="model109" src="models/109.glb"></a-asset-item>
+      <a-asset-item id="model110" src="models/110.glb"></a-asset-item>
+      <a-asset-item id="model111" src="models/111.glb"></a-asset-item>
+      <a-asset-item id="model112" src="models/112.glb"></a-asset-item>
+      <a-asset-item id="model113" src="models/113.glb"></a-asset-item>
+      <a-asset-item id="model114" src="models/114.glb"></a-asset-item>
+      <a-asset-item id="model115" src="models/115.glb"></a-asset-item>
+      <a-asset-item id="model116" src="models/116.glb"></a-asset-item>
+      <a-asset-item id="model117" src="models/117.glb"></a-asset-item>
+      <a-asset-item id="model118" src="models/118.glb"></a-asset-item>
+
+      <img id="img1" src="images/1.png">
+      <img id="img2" src="images/2.png">
+      <img id="img3" src="images/3.png">
+      <img id="img4" src="images/4.png">
+      <img id="img5" src="images/5.png">
+      <img id="img6" src="images/6.png">
+      <img id="img7" src="images/7.png">
+      <img id="img8" src="images/8.png">
+      <img id="img9" src="images/9.png">
+      <img id="img10" src="images/10.png">
+      <img id="img11" src="images/11.png">
+      <img id="img12" src="images/12.png">
+      <img id="img13" src="images/13.png">
+      <img id="img14" src="images/14.png">
+      <img id="img15" src="images/15.png">
+      <img id="img16" src="images/16.png">
+      <img id="img17" src="images/17.png">
+      <img id="img18" src="images/18.png">
+      <img id="img19" src="images/19.png">
+      <img id="img20" src="images/20.png">
+
+    </a-assets>
+    <!-- Markery -->
+    <a-marker type="pattern" url="markers/1.patt">
+      <a-entity gltf-model="#model1" scale="0.3 0.3 0.3" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img1" position="0 0.2 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/2.patt">
+      <a-entity gltf-model="#model2" scale="0.3 0.3 0.3" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img2" position="0 0 0" rotation="-90 0 0" width="1" height="1.4" material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/3.patt">
+      <a-entity gltf-model="#model3" scale="0.3 0.3 0.3" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img3" position="0 0 0" rotation="-90 0 0" width="1" height="1.4" material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/4.patt">
+      <a-entity gltf-model="#model4" scale="0.3 0.3 0.3" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img4" position="0 0 0" rotation="-90 0 0" width="1" height="1.4" material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/5.patt">
+      <a-entity gltf-model="#model5" scale="0.3 0.3 0.3" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img5" position="0 0 0" rotation="-90 0 0" width="1" height="1.4" material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/6.patt">
+      <a-entity gltf-model="#model6" scale="0.35 0.35 0.35" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img6" position="0 0 0" rotation="-90 0 0" width="1" height="1.4" material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/7.patt">
+      <a-entity gltf-model="#model7" scale="0.35 0.35 0.35" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img7" position="0 0 0" rotation="-90 0 0" width="1" height="1.4" material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/8.patt">
+      <a-entity gltf-model="#model8" scale="0.327 0.327 0.327" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img8" position="0 0 0" rotation="-90 0 0" width="1" height="1.4" material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/9.patt">
+      <a-entity gltf-model="#model9" scale="0.327 0.327 0.327" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img9" position="0 0 0" rotation="-90 0 0" width="1" height="1.4" material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/10.patt">
+      <a-entity gltf-model="#model10" scale="0.327 0.327 0.327" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img10" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/11.patt">
+      <a-entity gltf-model="#model11" scale="0.327 0.327 0.327" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img11" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/12.patt">
+      <a-entity gltf-model="#model12" scale="0.327 0.327 0.327" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img12" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/13.patt">
+      <a-entity gltf-model="#model13" scale="0.327 0.327 0.327" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img13" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/14.patt">
+      <a-entity gltf-model="#model14" scale="0.327 0.327 0.327" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img14" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/15.patt">
+      <a-entity gltf-model="#model15" scale="0.327 0.327 0.327" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img15" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/16.patt">
+      <a-entity gltf-model="#model16" scale="0.353 0.353 0.353" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img16" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/17.patt">
+      <a-entity gltf-model="#model17" scale="0.353 0.353 0.353" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img17" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/18.patt">
+      <a-entity gltf-model="#model18" scale="0.353 0.353 0.353" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img18" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/19.patt">
+      <a-entity gltf-model="#model19" scale="0.353 0.353 0.353" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img19" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/20.patt">
+      <a-entity gltf-model="#model20" scale="0.353 0.353 0.353" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+      <a-plane src="#img20" position="0 0 0" rotation="-90 0 0" width="1" height="1.4"
+        material="shader: flat"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/21.patt">
+      <a-entity gltf-model="#model21" scale="0.353 0.353 0.353" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/22.patt">
+      <a-entity gltf-model="#model22" scale="0.353 0.353 0.353" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/23.patt">
+      <a-entity gltf-model="#model23" scale="0.38 0.38 0.38" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/24.patt">
+      <a-entity gltf-model="#model24" scale="0.38 0.38 0.38" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/25.patt">
+      <a-entity gltf-model="#model25" scale="0.38 0.38 0.38" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/26.patt">
+      <a-entity gltf-model="#model26" scale="0.38 0.38 0.38" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/27.patt">
+      <a-entity gltf-model="#model27" scale="0.38 0.38 0.38" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/28.patt">
+      <a-entity gltf-model="#model28" scale="0.38 0.38 0.38" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/29.patt">
+      <a-entity gltf-model="#model29" scale="0.38 0.38 0.38" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/30.patt">
+      <a-entity gltf-model="#model30" scale="0.38 0.38 0.38" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/31.patt">
+      <a-entity gltf-model="#model31" scale="0.407 0.407 0.407" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/32.patt">
+      <a-entity gltf-model="#model32" scale="0.407 0.407 0.407" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/33.patt">
+      <a-entity gltf-model="#model33" scale="0.407 0.407 0.407" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/34.patt">
+      <a-entity gltf-model="#model34" scale="0.407 0.407 0.407" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/35.patt">
+      <a-entity gltf-model="#model35" scale="0.407 0.407 0.407" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/36.patt">
+      <a-entity gltf-model="#model36" scale="0.407 0.407 0.407" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/37.patt">
+      <a-entity gltf-model="#model37" scale="0.407 0.407 0.407" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/38.patt">
+      <a-entity gltf-model="#model38" scale="0.433 0.433 0.433" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/39.patt">
+      <a-entity gltf-model="#model39" scale="0.433 0.433 0.433" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/40.patt">
+      <a-entity gltf-model="#model40" scale="0.433 0.433 0.433" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/41.patt">
+      <a-entity gltf-model="#model41" scale="0.433 0.433 0.433" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/42.patt">
+      <a-entity gltf-model="#model42" scale="0.433 0.433 0.433" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/43.patt">
+      <a-entity gltf-model="#model43" scale="0.433 0.433 0.433" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/44.patt">
+      <a-entity gltf-model="#model44" scale="0.433 0.433 0.433" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/45.patt">
+      <a-entity gltf-model="#model45" scale="0.46 0.46 0.46" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/46.patt">
+      <a-entity gltf-model="#model46" scale="0.46 0.46 0.46" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/47.patt">
+      <a-entity gltf-model="#model47" scale="0.46 0.46 0.46" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/48.patt">
+      <a-entity gltf-model="#model48" scale="0.46 0.46 0.46" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/49.patt">
+      <a-entity gltf-model="#model49" scale="0.46 0.46 0.46" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/50.patt">
+      <a-entity gltf-model="#model50" scale="0.46 0.46 0.46" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/51.patt">
+      <a-entity gltf-model="#model51" scale="0.46 0.46 0.46" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/52.patt">
+      <a-entity gltf-model="#model52" scale="0.46 0.46 0.46" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/53.patt">
+      <a-entity gltf-model="#model53" scale="0.487 0.487 0.487" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/54.patt">
+      <a-entity gltf-model="#model54" scale="0.487 0.487 0.487" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/55.patt">
+      <a-entity gltf-model="#model55" scale="0.487 0.487 0.487" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/56.patt">
+      <a-entity gltf-model="#model56" scale="0.487 0.487 0.487" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/57.patt">
+      <a-entity gltf-model="#model57" scale="0.487 0.487 0.487" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/58.patt">
+      <a-entity gltf-model="#model58" scale="0.487 0.487 0.487" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/59.patt">
+      <a-entity gltf-model="#model59" scale="0.487 0.487 0.487" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/60.patt">
+      <a-entity gltf-model="#model60" scale="0.513 0.513 0.513" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/61.patt">
+      <a-entity gltf-model="#model61" scale="0.513 0.513 0.513" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/62.patt">
+      <a-entity gltf-model="#model62" scale="0.513 0.513 0.513" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/63.patt">
+      <a-entity gltf-model="#model63" scale="0.513 0.513 0.513" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/64.patt">
+      <a-entity gltf-model="#model64" scale="0.513 0.513 0.513" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/65.patt">
+      <a-entity gltf-model="#model65" scale="0.513 0.513 0.513" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/66.patt">
+      <a-entity gltf-model="#model66" scale="0.513 0.513 0.513" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/67.patt">
+      <a-entity gltf-model="#model67" scale="0.54 0.54 0.54" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/68.patt">
+      <a-entity gltf-model="#model68" scale="0.54 0.54 0.54" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/69.patt">
+      <a-entity gltf-model="#model69" scale="0.54 0.54 0.54" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/70.patt">
+      <a-entity gltf-model="#model70" scale="0.54 0.54 0.54" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/71.patt">
+      <a-entity gltf-model="#model71" scale="0.54 0.54 0.54" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/72.patt">
+      <a-entity gltf-model="#model72" scale="0.54 0.54 0.54" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/73.patt">
+      <a-entity gltf-model="#model73" scale="0.54 0.54 0.54" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/74.patt">
+      <a-entity gltf-model="#model74" scale="0.54 0.54 0.54" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/75.patt">
+      <a-entity gltf-model="#model75" scale="0.567 0.567 0.567" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/76.patt">
+      <a-entity gltf-model="#model76" scale="0.567 0.567 0.567" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/77.patt">
+      <a-entity gltf-model="#model77" scale="0.567 0.567 0.567" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/78.patt">
+      <a-entity gltf-model="#model78" scale="0.567 0.567 0.567" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/79.patt">
+      <a-entity gltf-model="#model79" scale="0.567 0.567 0.567" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/80.patt">
+      <a-entity gltf-model="#model80" scale="0.567 0.567 0.567" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/81.patt">
+      <a-entity gltf-model="#model81" scale="0.567 0.567 0.567" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/82.patt">
+      <a-entity gltf-model="#model82" scale="0.593 0.593 0.593" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/83.patt">
+      <a-entity gltf-model="#model83" scale="0.593 0.593 0.593" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/84.patt">
+      <a-entity gltf-model="#model84" scale="0.593 0.593 0.593" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/85.patt">
+      <a-entity gltf-model="#model85" scale="0.593 0.593 0.593" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/86.patt">
+      <a-entity gltf-model="#model86" scale="0.593 0.593 0.593" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/87.patt">
+      <a-entity gltf-model="#model87" scale="0.593 0.593 0.593" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/88.patt">
+      <a-entity gltf-model="#model88" scale="0.593 0.593 0.593" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/89.patt">
+      <a-entity gltf-model="#model89" scale="0.62 0.62 0.62" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/90.patt">
+      <a-entity gltf-model="#model90" scale="0.62 0.62 0.62" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/91.patt">
+      <a-entity gltf-model="#model91" scale="0.62 0.62 0.62" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/92.patt">
+      <a-entity gltf-model="#model92" scale="0.62 0.62 0.62" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/93.patt">
+      <a-entity gltf-model="#model93" scale="0.62 0.62 0.62" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/94.patt">
+      <a-entity gltf-model="#model94" scale="0.62 0.62 0.62" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/95.patt">
+      <a-entity gltf-model="#model95" scale="0.62 0.62 0.62" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/96.patt">
+      <a-entity gltf-model="#model96" scale="0.62 0.62 0.62" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/97.patt">
+      <a-entity gltf-model="#model97" scale="0.647 0.647 0.647" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/98.patt">
+      <a-entity gltf-model="#model98" scale="0.647 0.647 0.647" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/99.patt">
+      <a-entity gltf-model="#model99" scale="0.647 0.647 0.647" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/100.patt">
+      <a-entity gltf-model="#model100" scale="0.647 0.647 0.647" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/101.patt">
+      <a-entity gltf-model="#model101" scale="0.647 0.647 0.647" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/102.patt">
+      <a-entity gltf-model="#model102" scale="0.647 0.647 0.647" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/103.patt">
+      <a-entity gltf-model="#model103" scale="0.647 0.647 0.647" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/104.patt">
+      <a-entity gltf-model="#model104" scale="0.673 0.673 0.673" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/105.patt">
+      <a-entity gltf-model="#model105" scale="0.673 0.673 0.673" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/106.patt">
+      <a-entity gltf-model="#model106" scale="0.673 0.673 0.673" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/107.patt">
+      <a-entity gltf-model="#model107" scale="0.673 0.673 0.673" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/108.patt">
+      <a-entity gltf-model="#model108" scale="0.673 0.673 0.673" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/109.patt">
+      <a-entity gltf-model="#model109" scale="0.673 0.673 0.673" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/110.patt">
+      <a-entity gltf-model="#model110" scale="0.673 0.673 0.673" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/111.patt">
+      <a-entity gltf-model="#model111" scale="0.673 0.673 0.673" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/112.patt">
+      <a-entity gltf-model="#model112" scale="0.7 0.7 0.7" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/113.patt">
+      <a-entity gltf-model="#model113" scale="0.7 0.7 0.7" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/114.patt">
+      <a-entity gltf-model="#model114" scale="0.7 0.7 0.7" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/115.patt">
+      <a-entity gltf-model="#model115" scale="0.7 0.7 0.7" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/116.patt">
+      <a-entity gltf-model="#model116" scale="0.7 0.7 0.7" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/117.patt">
+      <a-entity gltf-model="#model117" scale="0.7 0.7 0.7" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/118.patt">
+      <a-entity gltf-model="#model118" scale="0.7 0.7 0.7" position="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000"></a-entity>
+    </a-marker>
+
+    <a-entity light="type: ambient; color: #ffffff; intensity: 1"></a-entity>
+    <a-entity light="type: directional; color: #ffffff; intensity: 0.5" position="1 1 0"></a-entity>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+
+</html>
